@@ -1,0 +1,152 @@
+$ms-sidebar: #181F25;
+$ms-logo: #242F38;
+$ms-button-accent: #2F363C;
+
+
+
+$ms-dark-green: #257E37;
+$ms-light-green: #30a648;
+$ms-lighter-green: #97c774;
+
+
+$sm-facebook: #3B5998;
+$sm-linkedin: #0077B5;
+$sm-twitter: #55ACEE;
+$sm-pinterest: #BD081C;
+$sm-youtube: #CD201F;
+$sm-insta: #E1306C;
+
+$mp-blue: #386fa4;
+$mp-dark-blue: #133c55;
+$mp-lighter-blue: #5899e2;
+$mp-lighter-blue-two: #85b4e9;
+
+$sidebar: #181f25;
+$logo-wrapper: #242f38;
+$bodycopy: #222222;
+
+
+$warning-yellow: #F4BF4D;
+$error-red: #BE4636;
+$error-bright-red: #F04124;
+$passing-green: #43AC6A;
+
+
+
+
+.ms-colors, .mp-colors, .universal-colors {
+    margin-top: 100px;
+}
+
+.color-info{
+    margin-top: 50px;
+}
+
+
+    .color-box{
+        height: 70px;
+        width: 200px;
+        color: rgba(255, 255, 255, .5);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 5px;
+
+        .color-code{
+            font-size: 20px;
+        }
+}
+
+
+//*MIMIC SOCIAL COLORS*//
+
+.dark-ms-green {
+    background-color: $ms-dark-green;
+}
+
+.lighter-ms-green {
+    background-color: $ms-lighter-green;
+}
+
+.ms-green {
+    background-color: $ms-light-green;
+}
+
+
+//*MIMIC PRO COLORS*//
+
+.mp-blue{
+    background-color: $mp-blue;
+}
+.mp-dark-blue {
+    background-color: $mp-dark-blue;
+}
+.mp-lighter-blue {
+    background-color: $mp-lighter-blue;
+}
+
+.mp-lighter-blue-two {
+    background-color: $mp-lighter-blue-two;
+}
+
+//*UNIVERSAL HUES*//
+
+.sidebar-color{
+    background-color: $sidebar;
+}
+
+.logo-wrapper{
+    background-color: $logo-wrapper;
+}
+
+.bodycopy{
+    background-color: $bodycopy;
+}
+
+
+
+//*OTHER TEXT WARNING COLORS**//
+
+.error-red{
+    background-color: $error-red;
+}
+
+.warning-yellow{
+    background-color: $warning-yellow;
+}
+
+.passing-green{
+    background-color: $passing-green;
+}
+
+.bright-error {
+    background-color: $error-bright-red;
+}
+
+//*SOCIAL MEDIA COLORS*//
+
+.facebook{
+    background-color: $sm-facebook;
+}
+
+.twitter {
+    background-color: $sm-linkedin;
+}
+
+.linkedin {
+    background-color: $sm-twitter;
+}
+
+.instagram {
+    background-color: $sm-insta;
+}
+
+.pinterest {
+    background-color: $sm-pinterest;
+}
+
+.youtube{
+    background-color: $sm-youtube;
+}
+
