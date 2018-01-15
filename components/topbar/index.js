@@ -9,12 +9,9 @@ class Topbar extends Component {
     render() {
 
       return (
-        React.createElement('div', {className:'bottombar'},
-        React.createElement('img', {src:ms, className:'logo'})
-      )
-        // <div className="bottombar">
-        //     <img src={ms} className="logo"/>
-        // </div>
+        <div className="bottombar">
+          <img src={ms} className="logo"/>
+        </div>
       );
     }
   }

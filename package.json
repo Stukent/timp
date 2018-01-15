@@ -15,5 +15,13 @@
   "bugs": {
     "url": "https://github.com/Stukent/timp/issues"
   },
-  "homepage": "https://github.com/Stukent/timp#readme"
+  "homepage": "https://github.com/Stukent/timp#readme",
+  "babel": {
+    "presets": [
+      "react-app"
+    ]
+  },
+  "dependencies": {
+    "babel-preset-react-app": "^3.1.1"
+  }
 }
