@@ -5,22 +5,22 @@ import note from './note.svg';
 
 
 class Bottombar extends Component {
-    render() {
+  render() {
 
-      return (
-        <div className="topbar">
-          <div className="icons-wrapper">
-              <div className="logobox">
-                  <img src={hint} alt='hints' />
-              </div>
-              <img src={note} className="note" alt='notes'/>
+    return (
+      <div className="topbar">
+        <div className="icons-wrapper">
+          <div className="logobox">
+            <img src={hint} alt='hints' />
           </div>
-            
-            
+          <img src={note} className="note" alt='notes' />
         </div>
-      );
-    }
+
+
+      </div>
+    );
   }
-  
-  export default Bottombar;
+}
+
+export default Bottombar;
 

@@ -4,15 +4,15 @@ import './style.scss';
 
 
 class ProfileDemo extends Component {
-    render() {
+  render() {
 
-      return (
-        <div className="profile">
-            <div className="avy"></div>
-        </div>
-      );
-    }
+    return (
+      <div className="profile">
+        <div className="avy"></div>
+      </div>
+    );
   }
-  
-  export default ProfileDemo;
-  
+}
+
+export default ProfileDemo;
+

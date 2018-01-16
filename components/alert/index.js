@@ -6,26 +6,25 @@ import PropTypes from 'prop-types';
 
 
 class Alert extends Component {
-     
 
-    render() {
+  render() {
 
-      return (
-        <div className="alerts-wrap">
-            <div className={this.props.kind}>
-                <img src={ewoke} />
-                <span className="call-action">{this.props.alert}</span>
-                <p>{this.props.children}</p>
-            </div>
+    return (
+      <div className="alerts-wrap">
+        <div className={this.props.kind}>
+          <img src={ewoke} />
+          <span className="call-action">{this.props.alert}</span>
+          <p>{this.props.children}</p>
         </div>
-      );
+      </div>
+    );
 
-    }
   }
-  
-  export default Alert;
-  
+}
+
+export default Alert;
+
 Alert.propTypes = {
-    kind: PropTypes.string,
-    alert: PropTypes.string
-  };
+  kind: PropTypes.string,
+  alert: PropTypes.string
+};

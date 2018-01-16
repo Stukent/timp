@@ -9,24 +9,24 @@ import Note from './note.svg';
 
 
 class DisplaySidebar extends Component {
-    render() {
+  render() {
 
-      return (
-        <div className="display-sidebar">
-          <div className="logobox">
-           <img src={MimicBlue} className="mimiclogo"/>
-          </div>
-          <div className="iconsbox">
-            <img src={Calendar} className="demo-list"/>
-            <img src={Hints} className="demo-list"/>
-            <img src={Note} className="demo-list"/>
-          </div>
-          
+    return (
+      <div className="display-sidebar">
+        <div className="logobox">
+          <img src={MimicBlue} className="mimiclogo" />
+        </div>
+        <div className="iconsbox">
+          <img src={Calendar} className="demo-list" />
+          <img src={Hints} className="demo-list" />
+          <img src={Note} className="demo-list" />
+        </div>
 
-       </div>
-      );
-    }
+
+      </div>
+    );
   }
-  
-  export default DisplaySidebar;
-  
+}
+
+export default DisplaySidebar;
+
