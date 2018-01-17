@@ -55,3 +55,21 @@ export {
   SaleImg,
   SocialHalf,
 } from './components/email-components'
+
+export {
+  IntroShield,
+  MimicIntro,
+  MimicIntroBlack,
+  MimicPro,
+  MimicProBlack,
+  ProShield,
+  ProShieldBlack,
+  MimicShield,
+  MimicShieldBlack,
+  MimicSocial,
+  MimicSocialBlack,
+  MimicSocialShield,
+  MimicSocialShieldBlack,
+  Stukent,
+  StukentBlack,
+} from './components/stukent-brand'
