@@ -16,6 +16,10 @@ export { default as ModalSmall } from './components/modal-two/'
 export { default as ModalInvert } from './components/modal-three/'
 export { default as Alert } from './components/alert'
 export { default as PopUp } from './components/pop-up'
+export { default as Error404 } from './components/error-404'
+export { default as Error500 } from './components/error-404'
+export { default as Loader } from './components/loader'
+export { default as BigLoader } from './components/loader-big'
 
 export {
   EmailLogo,
