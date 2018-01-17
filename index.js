@@ -1,42 +1,21 @@
-import Topbar from './components/topbar'
-import Bottombar from './components/bottombar'
-import Sidebar from './components/sidebar/'
-import DisplaySidebar from './components/display-sidebar/'
-import MobileBar from './components/mobile-bar/'
-import Button from './components/button/'
-import Dropdown from './components/dropdown/'
-import Form from './components/form/'
-import Paginate from './components/pagination/'
-import Selectors from './components/selectors/'
-import Accordion from './components/accordion/'
-import Card from './components/card/'
-import Table from './components/table/'
-import Modal from './components/modal-one/'
-import ModalSmall from './components/modal-two/'
-import ModalInvert from './components/modal-three/'
-import Alert from './components/alert'
-import PopUp from './components/pop-up'
-
-export {
-  Topbar,
-  Bottombar,
-  Sidebar,
-  DisplaySidebar,
-  MobileBar,
-  Button,
-  Dropdown,
-  Form,
-  Paginate,
-  Selectors,
-  Accordion,
-  Card,
-  Table,
-  Modal,
-  ModalSmall,
-  ModalInvert,
-  Alert,
-  PopUp,
-}
+export { default as Topbar } from './components/topbar'
+export { default as Bottombar } from './components/bottombar'
+export { default as Sidebar } from './components/sidebar/'
+export { default as DisplaySidebar } from './components/display-sidebar/'
+export { default as MobileBar } from './components/mobile-bar/'
+export { default as Button } from './components/button/'
+export { default as Dropdown } from './components/dropdown/'
+export { default as Form } from './components/form/'
+export { default as Paginate } from './components/pagination/'
+export { default as Selectors } from './components/selectors/'
+export { default as Accordion } from './components/accordion/'
+export { default as Card } from './components/card/'
+export { default as Table } from './components/table/'
+export { default as Modal } from './components/modal-one/'
+export { default as ModalSmall } from './components/modal-two/'
+export { default as ModalInvert } from './components/modal-three/'
+export { default as Alert } from './components/alert'
+export { default as PopUp } from './components/pop-up'
 
 export {
   EmailLogo,
