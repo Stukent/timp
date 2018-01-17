@@ -1,20 +1,13 @@
-import React, { Component } from 'react';
-import './style.scss';
-import ms from './mimic-logo.svg';
-
-// import ProfileDemo from '../profiledemo';
+import React from 'react'
+import './style.scss'
+import ms from './mimic-logo.svg'
 
 
-class Topbar extends Component {
-  render() {
+const Topbar = () => (
+  <div className="bottombar">
+    <img src={ms} className="logo" />
+  </div>
+)
 
-    return (
-      <div className="bottombar">
-        <img src={ms} className="logo" />
-      </div>
-    );
-  }
-}
-
-export default Topbar;
+export default Topbar
 

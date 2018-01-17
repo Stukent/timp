@@ -1,36 +1,45 @@
-import React, { Component } from 'react';
-import './style.scss';
+import React from 'react'
+import './style.scss'
 
 
+const Selectors = () => (
+  <div className="selectors">
+    <form className="select-form">
+      <h3>Take your pick!</h3>
+      <label htmlFor="contactChoice1">
+        <input
+          className="selector-radio"
+          type="radio"
+          id="contactChoice1"
+          name="picker"
+        />
+        <strong className="selector-strong">Pick me, me, me!</strong>
+      </label>
 
-class Selectors extends Component {
-  render() {
+      <label htmlFor="contactChoice2">
+        <input
+          className="selector-radio"
+          type="radio"
+          id="contactChoice2"
+          name="picker"
+        />
+        <strong className="selector-strong-two">NO! Pick me!</strong>
+      </label>
 
-    return (
-      <div className="selectors">
-        <form className="select-form">
-          <h3>Take your pick!</h3>
-          <label for="contactChoice1">
-            <input className="selector-radio" type="radio" id="contactChoice1"
-              name="picker" />
-            <strong className="selector-strong">Pick me, me, me!</strong></label>
+      <label htmlFor="contactChoice3">
+        <input
+          className="selector-radio"
+          type="radio"
+          id="contactChoice3"
+          name="picker"
+        />
+        <strong className="selector-strong-two">Y&apos;all need to chill...</strong>
+      </label>
 
-          <label for="contactChoice2">
-            <input className="selector-radio" type="radio" id="contactChoice2"
-              name="picker" />
-            <strong className="selector-strong-two">NO! Pick me!</strong></label>
+    </form>
 
-          <label for="contactChoice3">
-            <input className="selector-radio" type="radio" id="contactChoice3"
-              name="picker" />
-            <strong className="selector-strong-two">Y'all need to chill...</strong></label>
+  </div>
+)
 
-        </form>
-
-      </div>
-    );
-  }
-}
-
-export default Selectors;
+export default Selectors
 

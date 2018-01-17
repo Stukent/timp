@@ -1,140 +1,134 @@
-import React, { Component } from 'react';
-import './style.scss';
+import React from 'react'
+import './style.scss'
 
 
+const Table = () => (
+  <div className="table-container">
+    <table>
+      <tbody>
+        <tr className="top">
+          <th>Column</th>
+          <th>Column</th>
+          <th>Column</th>
+          <th>Column</th>
+          <th>Column</th>
+          <th>Column</th>
+          <th>Column</th>
+          <th>Column</th>
+          <th>Column</th>
+          <th>Column</th>
+          <th>Column</th>
+          <th>Column</th>
+          <th>Column</th>
+          <th>Column</th>
+        </tr>
 
-class Table extends Component {
-  render() {
+        <tr>
+          <td>Item</td>
+          <td>Item</td>
+          <td>Item</td>
+          <td>Item</td>
+          <td>Item</td>
+          <td>Item</td>
+          <td>Item</td>
+          <td>Item</td>
+          <td>Item</td>
+          <td>Item</td>
+          <td>Item</td>
+          <td>Item</td>
+          <td>Item</td>
+          <td>Item</td>
 
-    return (
-      <div className="table-container">
-        <table>
-          <tbody>
-            <tr className="top">
-              <th>Column</th>
-              <th>Column</th>
-              <th>Column</th>
-              <th>Column</th>
-              <th>Column</th>
-              <th>Column</th>
-              <th>Column</th>
-              <th>Column</th>
-              <th>Column</th>
-              <th>Column</th>
-              <th>Column</th>
-              <th>Column</th>
-              <th>Column</th>
-              <th>Column</th>
-            </tr>
+        </tr>
+        <tr>
+          <td>Item</td>
+          <td>Item</td>
+          <td>Item</td>
+          <td>Item</td>
+          <td>Item</td>
+          <td>Item</td>
+          <td>Item</td>
+          <td>Item</td>
+          <td>Item</td>
+          <td>Item</td>
+          <td>Item</td>
+          <td>Item</td>
+          <td>Item</td>
+          <td>Item</td>
 
-            <tr>
-              <td>Item</td>
-              <td>Item</td>
-              <td>Item</td>
-              <td>Item</td>
-              <td>Item</td>
-              <td>Item</td>
-              <td>Item</td>
-              <td>Item</td>
-              <td>Item</td>
-              <td>Item</td>
-              <td>Item</td>
-              <td>Item</td>
-              <td>Item</td>
-              <td>Item</td>
+        </tr>
+        <tr>
+          <td>Item</td>
+          <td>Item</td>
+          <td>Item</td>
+          <td>Item</td>
+          <td>Item</td>
+          <td>Item</td>
+          <td>Item</td>
+          <td>Item</td>
+          <td>Item</td>
+          <td>Item</td>
+          <td>Item</td>
+          <td>Item</td>
+          <td>Item</td>
+          <td>Item</td>
 
-            </tr>
-            <tr>
-              <td>Item</td>
-              <td>Item</td>
-              <td>Item</td>
-              <td>Item</td>
-              <td>Item</td>
-              <td>Item</td>
-              <td>Item</td>
-              <td>Item</td>
-              <td>Item</td>
-              <td>Item</td>
-              <td>Item</td>
-              <td>Item</td>
-              <td>Item</td>
-              <td>Item</td>
+        </tr>
+        <tr>
+          <td>Item</td>
+          <td>Item</td>
+          <td>Item</td>
+          <td>Item</td>
+          <td>Item</td>
+          <td>Item</td>
+          <td>Item</td>
+          <td>Item</td>
+          <td>Item</td>
+          <td>Item</td>
+          <td>Item</td>
+          <td>Item</td>
+          <td>Item</td>
+          <td>Item</td>
 
-            </tr>
-            <tr>
-              <td>Item</td>
-              <td>Item</td>
-              <td>Item</td>
-              <td>Item</td>
-              <td>Item</td>
-              <td>Item</td>
-              <td>Item</td>
-              <td>Item</td>
-              <td>Item</td>
-              <td>Item</td>
-              <td>Item</td>
-              <td>Item</td>
-              <td>Item</td>
-              <td>Item</td>
+        </tr>
+        <tr>
+          <td>Item</td>
+          <td>Item</td>
+          <td>Item</td>
+          <td>Item</td>
+          <td>Item</td>
+          <td>Item</td>
+          <td>Item</td>
+          <td>Item</td>
+          <td>Item</td>
+          <td>Item</td>
+          <td>Item</td>
+          <td>Item</td>
+          <td>Item</td>
+          <td>Item</td>
 
-            </tr>
-            <tr>
-              <td>Item</td>
-              <td>Item</td>
-              <td>Item</td>
-              <td>Item</td>
-              <td>Item</td>
-              <td>Item</td>
-              <td>Item</td>
-              <td>Item</td>
-              <td>Item</td>
-              <td>Item</td>
-              <td>Item</td>
-              <td>Item</td>
-              <td>Item</td>
-              <td>Item</td>
+        </tr>
+        <tr>
+          <td>Item</td>
+          <td>Item</td>
+          <td>Item</td>
+          <td>Item</td>
+          <td>Item</td>
+          <td>Item</td>
+          <td>Item</td>
+          <td>Item</td>
+          <td>Item</td>
+          <td>Item</td>
+          <td>Item</td>
+          <td>Item</td>
+          <td>Item</td>
+          <td>Item</td>
+        </tr>
 
-            </tr>
-            <tr>
-              <td>Item</td>
-              <td>Item</td>
-              <td>Item</td>
-              <td>Item</td>
-              <td>Item</td>
-              <td>Item</td>
-              <td>Item</td>
-              <td>Item</td>
-              <td>Item</td>
-              <td>Item</td>
-              <td>Item</td>
-              <td>Item</td>
-              <td>Item</td>
-              <td>Item</td>
+      </tbody>
+    </table>
+  </div>
 
-            </tr>
-            <tr>
-              <td>Item</td>
-              <td>Item</td>
-              <td>Item</td>
-              <td>Item</td>
-              <td>Item</td>
-              <td>Item</td>
-              <td>Item</td>
-              <td>Item</td>
-              <td>Item</td>
-              <td>Item</td>
-              <td>Item</td>
-              <td>Item</td>
-              <td>Item</td>
-              <td>Item</td>
-            </tr>
+)
 
-          </tbody>
-        </table>
-      </div>
-
-    );
-  }
-}
-
-export default Table;
+export default Table

@@ -1,30 +1,23 @@
-import React, { Component } from 'react';
-import './style.scss';
-import ewoke from './ewoke.svg';
-import PropTypes from 'prop-types';
+import React from 'react'
+import PropTypes from 'prop-types'
+
+import './style.scss'
+import ewoke from './ewoke.svg'
 
 
+const Alert = ({ kind, alert, children }) => (
+  <div className="alerts-wrap">
+    <div className={kind}>
+      <img src={ewoke} />
+      <span className="call-action">{alert}</span>
+      <p>{children}</p>
+    </div>
+  </div>
+)
 
-class Alert extends Component {
-
-  render() {
-
-    return (
-      <div className="alerts-wrap">
-        <div className={this.props.kind}>
-          <img src={ewoke} />
-          <span className="call-action">{this.props.alert}</span>
-          <p>{this.props.children}</p>
-        </div>
-      </div>
-    );
-
-  }
-}
-
-export default Alert;
+export default Alert
 
 Alert.propTypes = {
-  kind: PropTypes.string,
-  alert: PropTypes.string
-};
+  kind: PropTypes.string.isRequired,
+  alert: PropTypes.string.isRequired,
+}
