@@ -73,3 +73,12 @@ export {
   Stukent,
   StukentBlack,
 } from './components/stukent-brand'
+
+export {
+  BuhiLogo,
+  Jill,
+  Molly,
+  Raj,
+  Sally,
+  Sue,
+} from './components/buhi'

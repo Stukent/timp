@@ -1,0 +1,6 @@
+export { default as BuhiLogo } from './buhi'
+export { default as Jill } from './jill'
+export { default as Molly } from './molly'
+export { default as Raj } from './raj'
+export { default as Sally } from './sally'
+export { default as Sue } from './sue'
