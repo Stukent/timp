@@ -37,3 +37,21 @@ export {
   Alert,
   PopUp,
 }
+
+export {
+  EmailLogo,
+  CustomBanner,
+  CouponHalf,
+  CustomFull,
+  CustomHalf,
+  FeaturedBanner,
+  FeaturedFull,
+  FeaturedHalf,
+  HolidayBanner,
+  HolidayHalf,
+  HolidaySale,
+  LogoBanner,
+  LoyalHalf,
+  SaleImg,
+  SocialHalf,
+} from './components/email-components'
