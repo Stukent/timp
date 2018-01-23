@@ -1,0 +1,113 @@
+.mobile-alert{
+    height: 100%;
+    
+  }
+  .content-wrapper{
+    font-family: 'Open Sans';
+    color: #222222;
+    border-radius: 3px;
+    background-color: rgba(67, 172, 106, .7);
+  
+    
+    .close{
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      
+      img{
+        padding-right: 15px;
+        padding-top: 15px;
+        cursor: pointer;
+      }
+    }
+  }
+  
+  .avatar{
+    background-color: #EFF2C0;
+    height: 130px;
+    width: 130px;
+    border-radius: 90px;
+    margin: 0 auto;
+  }
+  
+  .alert{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    h2{
+      font-size: 3em;
+      color: #ffffff;
+      margin: 0;
+    }
+  }
+  
+  .message{
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 10px;
+    text-align: center;
+    color: #ffffff;
+    
+    p{
+      margin-top: 2px;
+      font-size: 20px;
+      line-height: 35px;
+    }
+    
+    h3{
+      margin-bottom: 10px;
+      font-size: 24px;
+    }
+  }
+  
+  
+  .button{
+    margin-top: 20px;
+  }
+  
+  .button button{
+    width: 130px;
+    height: 60px;
+    color: #43AC6A;
+    border-radius: 5px;
+    font-size: 20px;
+    border: #ffffff;
+    cursor: pointer;
+    text-transform: uppercase;
+  
+    
+  }
+
+  /*each of these have to be absolutely positioned when ACTUALLY being applied for those formats*/
+  
+  @media (max-width: 400px) {   
+    .content-wrapper{
+    height: 100%;
+     padding-bottom: 30px;
+      bottom: 0;
+      top: 0;
+      left: 0;
+      right: 0;
+      transition: all .5s ease-in-out;
+      
+    }
+  }
+  
+  @media (min-width: 400px) { 
+    .content-wrapper{
+      width: 80%;
+      margin: 10px auto;
+      top: 0;
+      left: 0;
+      right: 0;
+      padding-bottom: 30px;
+      max-width: 660px;
+      transition: all .5s ease-in-out;
+    }
+  }
+  
+  
+  
+  

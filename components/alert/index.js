@@ -20,4 +20,5 @@ export default Alert
 Alert.propTypes = {
   kind: PropTypes.string.isRequired,
   alert: PropTypes.string.isRequired,
+  children: PropTypes.any.isRequired,
 }
