@@ -1,0 +1,68 @@
+# Javascript Node CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-javascript/ for more details
+#
+defaults: &defaults
+  working_directory: ~/repo
+  docker:
+    - image: circleci/node:7.10
+
+version: 2
+jobs:
+  build:
+    <<: *defaults
+    steps:
+      - checkout
+
+      # Download and cache dependencies
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "package.json" }}
+          # fallback to using the latest cache if no exact match is found
+          - v1-dependencies-
+      - run: mkdir -p dist
+      - run: npm install
+      - run: npm run build
+      - run: cp ./package.compiled.json ./dist/package.json
+      - run: cd dist/ && tar -cvzf timp.tar.gz ./* && cd ../
+
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+      
+      - persist_to_workspace:
+          root: dist
+          paths:
+            - timp.tar.gz
+  
+  deploy_development:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: ~/repo/dist
+      - run:
+          name: Get Pip
+          command: curl -O https://bootstrap.pypa.io/get-pip.py
+      - run:
+          name: Install Pip
+          command: python2.7 get-pip.py --user
+      - run:
+          name: Install AWS CLI
+          command: sudo apt-get install python-dev && ~/.local/bin/pip install awscli --upgrade --user
+      - run:
+          name: Deploy to S3
+          command: ~/.local/bin/aws s3 cp ~/repo/dist/timp.tar.gz s3://stukent-timp/timp.tar.gz
+  
+workflows:
+  version: 2
+  build-and-deploy:
+    jobs:
+      - build
+      - deploy_development:
+          filters:
+            branches:
+              only:
+                - master
+          requires:
+            - build

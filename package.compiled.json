@@ -2,10 +2,9 @@
   "name": "timp",
   "version": "0.1.0",
   "description": "A Library of Stukent React components",
-  "main": "index.js",
+  "main": "timp.umd.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
