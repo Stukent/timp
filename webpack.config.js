@@ -1,5 +1,12 @@
 // Example webpack configuration with asset fingerprinting in production.
 
+const GenerateJsonPlugin = require('generate-json-webpack-plugin')
+
+
+const outputPackage = {
+  ...require('./package.json'), // eslint-disable-line global-require
+  main: './timp.umd.js',
+}
 
 // See for reference:
 // http://tech.trivago.com/2015/12/17/export-multiple-javascript-module-formats/
@@ -38,5 +45,9 @@ module.exports = {
   resolve: {
     root: './',
   },
+
+  plugins: [
+    new GenerateJsonPlugin('package.json', outputPackage),
+  ],
 }
 

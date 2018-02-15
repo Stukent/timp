@@ -23,7 +23,6 @@ jobs:
       - run: mkdir -p dist
       - run: npm install
       - run: npm run build
-      - run: cp ./package.compiled.json ./dist/package.json
       - run: cd dist/ && tar -cvzf timp.tar.gz ./* && cd ../
 
       - save_cache:
