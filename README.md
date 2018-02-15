@@ -9,3 +9,9 @@ You'll need to add to `package.json` a line like the folowing
 
 Where `<identifier>` is a commit, branch, or tag.
 Make sure the importing project is set up to transpile this code for ES6 and JSX
+
+
+### Development
+
+`npm run watch` will start a webpack watcher to keep the `dist/` folder build. `npm link` will not work, you'll need to symlink into
+that `dist` folder.

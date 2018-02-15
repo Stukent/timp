@@ -1,50 +1,53 @@
 // Example webpack configuration with asset fingerprinting in production.
-"use strict";
+
+const GenerateJsonPlugin = require('generate-json-webpack-plugin')
+
+
+const outputPackage = {
+  ...require('./package.json'), // eslint-disable-line global-require
+  main: './timp.umd.js',
+}
 
 // See for reference:
 // http://tech.trivago.com/2015/12/17/export-multiple-javascript-module-formats/
 
-function createConfig(target) {
-  return {
-    entry: './index.js',
+module.exports = {
+  entry: './index.js',
 
-    output: {
-      path: __dirname +'/dist/',
-      filename: 'timp.' + target + '.js',
-      library: 'timp',
-      libraryTarget: target
-    },
+  output: {
+    path: `${__dirname}/dist/`,
+    filename: 'timp.umd.js',
+    library: 'timp',
+    libraryTarget: 'umd',
+  },
 
-    module: {
-      loaders: [
-          { 
-            loader: "babel-loader",
-            test: /\.js$/,
-          },
-          {
-            test: /\.scss$/,
-            loaders: ["style-loader", "css-loader", "sass-loader"]
-          },
-          {
-            test: /\.inline.svg$/,
-            loader: 'babel!svg-react',
-          },
-          {
-            test: /\.jpe?g$|\.gif$|\.png$|^(?!.*\.inline\.svg$).*\.svg$/,
-            loader: 'url',
-          },
-        ]
-    },
+  module: {
+    loaders: [
+      {
+        loader: 'babel-loader',
+        test: /\.js$/,
+      },
+      {
+        test: /\.scss$/,
+        loaders: ['style-loader', 'css-loader', 'sass-loader'],
+      },
+      {
+        test: /\.inline.svg$/,
+        loader: 'babel!svg-react',
+      },
+      {
+        test: /\.jpe?g$|\.gif$|\.png$|^(?!.*\.inline\.svg$).*\.svg$/,
+        loader: 'url',
+      },
+    ],
+  },
 
-    resolve: {
-      root: './'
-    },
-  };
+  resolve: {
+    root: './',
+  },
+
+  plugins: [
+    new GenerateJsonPlugin('package.json', outputPackage),
+  ],
 }
 
-module.exports = [
-  createConfig('var'),
-  createConfig('commonjs2'),
-  createConfig('amd'),
-  createConfig('umd')
-];
