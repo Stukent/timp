@@ -1,18 +1,22 @@
 {
   "name": "timp",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A Library of Stukent React components",
-  "main": "index.js",
+  "main": "dist/timp.umd.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-    "watch": "webpack --watch --progress"
+    "watch": "webpack --watch --progress",
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/Stukent/timp.git"
   },
-  "author": "",
+  "files": [
+    "dist"
+  ],
+  "author": "Stukent <development@stukent.com",
   "license": "UNLICENSED",
   "bugs": {
     "url": "https://github.com/Stukent/timp/issues"
