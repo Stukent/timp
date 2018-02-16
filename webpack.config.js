@@ -22,10 +22,10 @@ module.exports = {
   },
 
   module: {
-    loaders: [
+    rules: [
       {
-        loader: 'babel-loader',
         test: /\.js$/,
+        loader: 'babel-loader',
       },
       {
         test: /\.scss$/,
@@ -33,17 +33,20 @@ module.exports = {
       },
       {
         test: /\.inline.svg$/,
-        loader: 'babel!svg-react',
+        loader: 'babel-loader!svg-react-loader',
       },
       {
         test: /\.jpe?g$|\.gif$|\.png$|^(?!.*\.inline\.svg$).*\.svg$/,
-        loader: 'url',
+        loader: 'url-loader',
       },
     ],
   },
 
   resolve: {
-    root: './',
+    modules: [
+      './',
+      'node_modules',
+    ],
   },
 
   plugins: [
