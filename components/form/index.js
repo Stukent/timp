@@ -1,9 +1,10 @@
 import React from 'react'
 import './style.scss'
+import Button from '../button'
 
 
 const Form = () => (
-  <div className="form-sec">
+  <div className="stukent-form">
     <form>
       <span className="x-mark">&times; </span>
       <div className="header">
@@ -26,8 +27,8 @@ const Form = () => (
         <input name="budget" className="form-input" type="number" />
       </label>
       <div className="button-wrapper">
-        <button className="form-btn btn">Save</button>
-        <button className="no-form btn">Nevermind</button>
+        <Button text="Go back" />
+        <Button text="Save" type="active" />
       </div>
 
     </form>

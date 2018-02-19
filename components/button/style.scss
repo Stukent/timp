@@ -1,27 +1,41 @@
 @import '../../util/colors.scss';
 
-.button {
-   display: flex;
-   justify-content: center;
-   margin-top: 30px;
-}
-
-.button-info button{
-    // margin-bottom: 30px;
-    margin-right: 30px;
+.sk-btn {
     font-size: 15px;
-    width: 183px;
+    min-width: 120px;
     border-radius: 5px;
     font-family: 'Open Sans';   
     padding: 10px;
     transition: background-color .2s ease-in;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.sk-btn.active {
+    background-color: $ms-light-green;
+    color: #ffffff;
+    border: none;
+
+    &:hover{
+        box-shadow: 0px 0px 6px 1px rgba(224,224,224,1);
+        color: #ffffff;
+    }
+
+    &:active{
+        box-shadow: 0px 0px 6px 1px rgba(148,148,148,1);
+        background-color: $ms-dark-green;
+    }
+
+    &:focus{
+        outline-style: none;
+    }
 }
 
 
-.normal { 
+.sk-btn.normal{ 
     background-color: #ffffff;
     color: $mp-dark-blue;
-
 
     &:hover{
         box-shadow: 0px 0px 6px 1px rgba(224,224,224,1);
@@ -32,51 +46,20 @@
     &:active{
         background-color: rgb(24, 37, 41);
         box-shadow: 0px 0px 6px 1px rgba(148,148,148,1);
-        
     }
 
     &:focus{
         outline-style: none;
-
     }
 }
 
 
-.go-btn { 
-    background-color: $ms-light-green;
-    color: #ffffff;
-
-
-    &:hover{
-        box-shadow: 0px 0px 6px 1px rgba(224,224,224,1);
-        color: #ffffff;
-    }
-
-    &:active{
-        box-shadow: 0px 0px 6px 1px rgba(148,148,148,1);
-        background-color: $ms-dark-green;
-        
-    }
-
-    &:focus{
-        outline-style: none;
-
-    }
-}
-
-
-
-.unactive{
+.sk-btn.inactive{
     background-color: #ECEDED;
     color: #B6B8B9;
+    border: none;
 
     &:focus{
         outline-style: none;
-
     }
 }
-
-
-
-
-

@@ -1,6 +1,7 @@
 import React from 'react'
 import './style.scss'
 import Close from './close.svg'
+import Button from '../button'
 
 
 const Modal = () => (
@@ -55,8 +56,8 @@ const Modal = () => (
           </div>
 
           <div className="call-to-action">
-            <button className="back"><a href="#ignore"> Go back</a></button>
-            <button className="cart"><a href="#ignore"> Add To Cart </a></button>
+            <Button text="Go back" />
+            <Button text="Add To Cart" type="active" />
           </div>
         </div>
       </div>
