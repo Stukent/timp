@@ -21,6 +21,8 @@ export { default as Error404 } from './components/error-404'
 export { default as Error500 } from './components/error-404'
 export { default as Loader } from './components/loader'
 export { default as BigLoader } from './components/loader-big'
+export { default as Footer } from './components/footer'
+export { default as VideoPlayer } from './components/video-player'
 
 export {
   EmailLogo,
