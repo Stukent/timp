@@ -1,0 +1,21 @@
+@import '../../util/colors.scss';
+
+.sk-footer {
+  background-color: $ms-sidebar;
+  color: #ffffff;
+  padding: 24px;
+  bottom: 0;
+
+  .contact-title {
+    margin-top: 0;
+    font-family: 'Open Sans'
+  }
+  .contact-info{
+    font-style: normal;
+    font-size: small;
+  }
+  .stukent {
+    margin-top: 16px;
+    width: 120px;
+  }
+}
