@@ -1,7 +1,19 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { Button } from '@storybook/react/demo'
+import { withKnobs } from '@storybook/addon-knobs'
+import { withReadme } from 'storybook-readme'
 
-storiesOf('Button', module)
-  .add('with text', () => (<Button>Hey there!</Button>))
-  .add('with really long text', () => (<Button>It seems like there are better ways to do this than put a lot of text on a button but #yolo</Button>))
+import { text, boolean, number } from '@storybook/addon-knobs'
+
+
+import Toast from '../components/ToastCenter/Toast'
+import ToastCenter from '../components/ToastCenter/ToastCenter'
+import * as ToastReadme from '../components/ToastCenter/README.md'
+
+storiesOf('Toast Center', module)
+  .addDecorator(withReadme(ToastReadme))
+  .add('with a toast', () => (<ToastCenter><Toast /></ToastCenter>))
+
+storiesOf('Toast', module)
+  // .addDecorator(withKnobs)
+  .add('success toast', () => (<Toast toastMessage={text('toastMessage', 'hey')} />))
