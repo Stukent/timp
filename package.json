@@ -44,6 +44,8 @@
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",
+    "@storybook/addon-a11y": "^4.1.4",
+    "@storybook/addon-knobs": "^4.1.4",
     "@storybook/react": "^4.1.4",
     "babel-cli": "^6.26.0",
     "babel-loader": "^8.0.5",
@@ -52,6 +54,7 @@
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-svg-loader": "^2.1.0",
+    "storybook-readme": "^4.0.2",
     "webpack": "^4.28.1"
   }
 }
