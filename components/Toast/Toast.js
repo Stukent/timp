@@ -5,12 +5,11 @@ import './Toast.css'
 class Toast extends Component {
   componentDidMount() {
     if (!this.props.toast.callback && this.props.toast.type !== 'danger') {
-      // setTimeout(() => this.props.toastSelfRemoval(this.props.toast.id), 3500)
+      setTimeout(() => this.props.toastSelfRemoval(), 3500)
     }
   }
 
   render() {
-    // const { toast, index, performAction, actions, history } = this.props
     const { toast } = this.props
 
     return (
@@ -23,9 +22,7 @@ class Toast extends Component {
         )}
         <span>{toast.message}</span>
         {toast.callback && <button className="btn btn-primary action" onClick={() => toast.callback.fn()}>{toast.callback.label || 'Fix this'}</button>}
-        {/* {toast.action && <button className="btn btn-primary action" onClick={() => performAction(toast, actions, history)}>Fix this</button>} */}
-        {/* <button className="btn btn-clear float-right" onClick={() => actions.hideToast(index)} /> */}
-        <button className="btn btn-clear float-right" onClick={() => {}} />
+        <button className="btn btn-clear float-right" onClick={() => console.log('clicked')} />
       </div>
     )
   }
