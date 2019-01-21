@@ -17,6 +17,7 @@
   "files": [
     "dist"
   ],
+  "typings": "index.d.ts",
   "author": "Stukent <development@stukent.com",
   "license": "UNLICENSED",
   "bugs": {
