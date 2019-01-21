@@ -19,12 +19,12 @@ jobs:
           keys:
           - v1-dependencies-{{ checksum "package.json" }}
       - run: mkdir -p dist
+      - run: npm install
       - run: 
-          name: npm install
-          command: npm install
+          name: npm run build
+          command: npm run build
           environment:
             NODE_ENV: production
-      - run: npm run build
       - run: cd dist/ && tar -cvzf timp.tar.gz ./* && cd ../
 
       - save_cache:
