@@ -1,0 +1,89 @@
+.toast {
+  background: hsla(192, 55%, 42%, 1);
+  /* border: .1rem solid #ededed; */
+  border-radius: .3rem;
+  color: #fff;
+  display: block;
+  padding: 1.4rem;
+  width: 100%;
+  font-size: 14px;
+  font-family: "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Hiragino Kaku Gothic Pro", Meiryo, "Malgun Gothic", sans-serif;
+}
+
+.toast-success {
+  background:#32b643;
+  color: #fff;
+}
+
+.toast-warning {
+  background:#ffb700;
+  color: #fff;
+}
+
+.toast-danger {
+  background:#e85600;
+  color: #fff;
+}
+
+.toast .btn-clear {
+  color: #fff;
+  float: right;
+  height: 24px;
+  width: 24px;
+  border-radius: 48px;
+  padding: 0;
+}
+
+.toast .btn:not(.btn-clear) {
+  float: right;
+  padding: 5px 10px;
+  background: rgba(255,255,255,0.75)
+}
+
+.app-toast-center .toast .btn-clear{
+  height: 24px;
+  width: 24px;
+  border-radius: 48px;
+}
+
+.show-outline .toast .btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #fff;
+}
+
+.btn {
+  position: relative;
+  -webkit-appearance: none;
+  background: white;
+  border: none;
+  border-radius: .3rem;
+  cursor: pointer;
+  display: inline-block;
+  outline: 0;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  transition-duration: .2s;
+}
+
+.btn-clear {
+  background: transparent;
+  border: 0;
+  color: #666;
+  margin-left: .3rem;
+  opacity: .45;
+  padding: 0;
+}
+.btn-clear:hover {
+    opacity: .85;
+  }
+.btn-clear::before {
+    content: '\00d7';
+    font-size: 2rem;
+}
+
+button:active {
+  transform: translateY(1px)
+}
