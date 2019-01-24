@@ -54,6 +54,21 @@ jobs:
       - run:
           name: Deploy to S3
           command: ~/.local/bin/aws s3 cp ~/repo/dist/timp.tar.gz s3://stukent-timp/timp.tar.gz
+  deploy_storybook:
+    <<: *defaults
+    steps:
+      - checkout
+      - add_ssh_keys
+      - run:
+          name: NPM Install
+          command: npm install
+      - run:
+          name: Output Files
+          command: npm run --silent storybook-build
+      - run:
+          name: Copy to Server
+          command: |
+            scp -o StrictHostKeyChecking=no -r ~/repo/.storybook-dist/. deploy@storybook.stukent.com:/home/deploy/storybook.stukent.com/public_html
   
 workflows:
   version: 2
@@ -64,6 +79,13 @@ workflows:
           filters:
             branches:
               only:
-                - master
+                - master    
+          requires:
+            - build
+      - deploy_storybook:
+          filters:
+            branches:
+              only:
+                - development
           requires:
             - build
