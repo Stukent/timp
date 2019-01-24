@@ -1,6 +1,15 @@
 import React, { Component } from 'react'
 
+import Icon from '@mdi/react'
+import { mdiCheck, mdiAlert, mdiAlertOctagon, mdiInformationOutline, mdiClose } from '@mdi/js'
+
 import './Toast.css'
+
+const IconMap = {
+  success: mdiCheck,
+  warning: mdiAlert,
+  danger: mdiAlertOctagon,
+}
 
 class Toast extends Component {
   componentDidMount() {
@@ -22,30 +31,19 @@ class Toast extends Component {
         className={`toast toast-${toast.type}`}
         role="alert"
       >
-        {toast.icon && (
-          <i className={`icon fa ${toast.icon}`} />
-        )}
-        <span>{toast.message}</span>
+        <Icon className="toast-icon" path={IconMap[toast.type] ? IconMap[toast.type] : mdiInformationOutline} />
+        <p>{toast.message}</p>
         {toast.callback
-          ? <button className="btn btn-primary action" onClick={() => this.callback(toast.id)}>{toast.callback.label || 'Fix this'}</button>
-          : <button className="btn btn-clear" onClick={() => this.props.dismissToast(toast.id)} /> }
+          ? <button className="toast-btn action-btn" onClick={() => this.callback(toast.id)}>{toast.callback.label || 'Fix this'}</button>
+          : (
+            <button className="toast-btn dismiss-btn" aria-label="close" onClick={() => this.props.dismissToast(toast.id)}>
+              <Icon className="dismiss-btn-icon" path={mdiClose} tabIndex="-1" />
+            </button>
+            )
+          }
       </div>
     )
   }
 }
-
-// const types = {
-//   toast: {
-//    id: string
-//    type: string,
-//    icon: string,
-//    message: string,
-//    callback: {
-//     fn: fn,
-//     label: string
-//    },
-//   },
-//  dismissToast: fn (required)
-// }
 
 export default Toast

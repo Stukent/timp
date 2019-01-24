@@ -13,12 +13,11 @@ setAddon(JSXAddon)
 storiesOf('Toast', module)
   .addDecorator(withReadme(ToastReadme))
   .addWithJSX('all toasts', () => (
-    <div>
+    <div id="story-root">
       <Toast
         toast={{
           id: 1,
           type: '',
-          icon: 'trash',
           message: 'I\'m the default toast!',
         }}
         dismissToast={() => {}}
@@ -27,7 +26,6 @@ storiesOf('Toast', module)
         toast={{
           id: 2,
           type: 'success',
-          icon: 'trash',
           message: 'I\'m the success toast!',
         }}
         dismissToast={() => {}}
@@ -36,7 +34,6 @@ storiesOf('Toast', module)
         toast={{
           id: 3,
           type: 'warning',
-          icon: 'trash',
           message: 'I\'m the warning toast!',
         }}
         dismissToast={() => {}}
@@ -45,46 +42,53 @@ storiesOf('Toast', module)
         toast={{
           id: 4,
           type: 'danger',
-          icon: 'trash',
           message: 'I\'m the danger toast!',
         }}
         dismissToast={() => {}}
       />
     </div>
   ))
-  .addWithJSX('default toast', () => (<Toast
-    toast={{
-      id: 5,
-      type: text('type', ''),
-      icon: text('icon', 'trash'),
-      message: text('message', 'Thank you for your feedback!'),
-    }}
-    dismissToast={() => {}}
-  />))
-  .addWithJSX('success toast', () => (<Toast
-    toast={{
-      id: 6,
-      type: text('type', 'success'),
-      icon: text('icon', 'trash'),
-      message: text('message', 'Success! This simulation has been reset.'),
-  }}
-    dismissToast={() => {}}
-  />))
-  .addWithJSX('warning toast', () => (<Toast
-    toast={{
-      id: 7,
-      type: text('type', 'warning'),
-      icon: text('icon', 'trash'),
-      message: text('message', 'Modifying a course currently in session will cause all simulations to be recalculated.'),
-  }}
-    dismissToast={() => {}}
-  />))
-  .addWithJSX('danger toast', () => (<Toast
-    toast={{
-      id: 8,
-      type: text('type', 'danger'),
-      icon: text('icon', 'trash'),
-      message: text('message', 'Simulation failed to save. Contact support if this continues.'),
-  }}
-    dismissToast={() => {}}
-  />))
+  .addWithJSX('default toast', () => (
+    <div id="story-root">
+      <Toast
+        toast={{
+          id: 5,
+          type: text('type', ''),
+          message: text('message', 'Thank you for your feedback!'),
+        }}
+        dismissToast={() => {}}
+      />
+    </div>))
+  .addWithJSX('success toast', () => (
+    <div id="story-root">
+      <Toast
+        toast={{
+          id: 6,
+          type: text('type', 'success'),
+          message: text('message', 'Success! This simulation has been reset.'),
+        }}
+        dismissToast={() => {}}
+      />
+    </div>))
+  .addWithJSX('warning toast', () => (
+    <div id="story-root">
+      <Toast
+        toast={{
+          id: 7,
+          type: text('type', 'warning'),
+          message: text('message', 'Modifying a course currently in session will cause all simulations to be recalculated.'),
+        }}
+        dismissToast={() => {}}
+      />
+    </div>))
+  .addWithJSX('danger toast', () => (
+    <div id="story-root">
+      <Toast
+        toast={{
+          id: 8,
+          type: text('type', 'danger'),
+          message: text('message', 'Simulation failed to save. Contact support if this continues.'),
+        }}
+        dismissToast={() => {}}
+      />
+    </div>))
