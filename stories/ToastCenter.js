@@ -15,7 +15,7 @@ storiesOf('Toast Center', module)
   .addWithJSX('with a success toast', () => {
     const store = new Store({
       toasts: [{
-        type: 'success', icon: 'trash', message: 'Success! Your request was processed.', id: 0,
+        type: 'success', message: 'Success! Your request was processed.', id: 'success-1',
       }],
     })
     const removeToast = () => {
@@ -26,22 +26,24 @@ storiesOf('Toast Center', module)
     const addToast = () => {
       const toasts = store.get('toasts')
       const newToast = {
-        type: 'success', icon: 'trash', message: 'Success! Your request was processed.', id: toasts.length + 1,
+        type: 'success', message: 'Success! Your request was processed.', id: `success-${toasts.length + 1}`,
       }
       toasts.push(newToast)
       store.set({ toasts })
     }
     return (
-      <State store={store}>
-        <ToastCenter toasts={store.get('toasts')} toastRemovalFn={removeToast} />
-        <button onClick={addToast}>New Toast</button>
-      </State>
+      <div id="story-root">
+        <State store={store}>
+          <ToastCenter toasts={store.get('toasts')} toastRemovalFn={removeToast} />
+          <button onClick={addToast}>New Toast</button>
+        </State>
+      </div>
     )
   })
   .addWithJSX('with a danger toast', () => {
     const store = new Store({
       toasts: [{
-        type: 'danger', icon: 'trash', message: 'Request failed. Server responded with error: 404 - Not Found', id: 1,
+        type: 'danger', message: 'Request failed. Server responded with error: 404 - Not Found', id: 'danger-1',
       }],
     })
     const removeToast = () => {
@@ -52,22 +54,25 @@ storiesOf('Toast Center', module)
     const addToast = () => {
       const toasts = store.get('toasts')
       const newToast = {
-        type: 'danger', icon: 'trash', message: 'Request failed. Server responded with error: 404 - Not Found', id: toasts.length + 1,
+        type: 'danger', message: 'Request failed. Server responded with error: 404 - Not Found', id: `danger-${toasts.length + 1}`,
       }
       toasts.push(newToast)
       store.set({ toasts })
+      console.log(toasts)
     }
     return (
-      <State store={store}>
-        <ToastCenter toasts={store.get('toasts')} toastRemovalFn={removeToast} />
-        <button onClick={addToast}>New Toast</button>
-      </State>
+      <div id="story-root">
+        <State store={store}>
+          <ToastCenter toasts={store.get('toasts')} toastRemovalFn={removeToast} />
+          <button onClick={addToast}>New Toast</button>
+        </State>
+      </div>
     )
   })
   .addWithJSX('with toast with a callback', () => {
     const store = new Store({
       toasts: [{
-        id: 1, type: 'success', icon: 'trash', message: 'Invalid input. Click here to fix this.', callback: { fn: () => alert('Toast clicked!'), label: 'Fix me' },
+        id: 'callback-1', type: 'success', message: 'Invalid input. Click here to fix this.', callback: { fn: () => alert('Toast clicked!'), label: 'Go to place to fix this' },
       }],
     })
     const removeToast = () => {
@@ -78,15 +83,17 @@ storiesOf('Toast Center', module)
     const addToast = () => {
       const toasts = store.get('toasts')
       const newToast = {
-        id: toasts.length + 1, type: 'success', icon: 'trash', message: 'Invalid input. Click here to fix this.', callback: { fn: () => alert('Toast clicked!'), label: 'Fix me' },
+        id: `callback-${toasts.length + 1}`, type: 'success', message: 'Invalid input. Click here to fix this.', callback: { fn: () => alert('Toast clicked!'), label: 'Go to place to fix this' },
       }
       toasts.push(newToast)
       store.set({ toasts })
     }
     return (
-      <State store={store}>
-        <ToastCenter toasts={store.get('toasts')} toastRemovalFn={removeToast} />
-        <button onClick={addToast}>New Toast</button>
-      </State>
+      <div id="story-root">
+        <State store={store}>
+          <ToastCenter toasts={store.get('toasts')} toastRemovalFn={removeToast} />
+          <button onClick={addToast}>New Toast</button>
+        </State>
+      </div>
     )
   })

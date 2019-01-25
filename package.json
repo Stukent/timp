@@ -26,6 +26,8 @@
   },
   "homepage": "https://github.com/Stukent/timp#readme",
   "dependencies": {
+    "@mdi/js": "^3.3.92",
+    "@mdi/react": "^1.1.0",
     "babel-eslint": "^8.2.1",
     "babel-preset-react-app": "^7.0.0",
     "css-loader": "^0.28.9",

@@ -21,19 +21,4 @@ class ToastCenter extends Component {
   }
 }
 
-// const types = {
-//   id: string,
-//   toast: {
-//       id: string,
-//       type: string,
-//       icon: string,
-//       message: string,
-//       callback: {
-//       fn: function,
-//       label: string
-//       },
-//     },
-//   dismissToast: fn (required)
-// }
-
 export default ToastCenter
